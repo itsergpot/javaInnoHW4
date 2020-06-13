@@ -10,7 +10,7 @@ public class Main {
         int firstNumber = scan.nextInt();
         int secondNumber = scan.nextInt();
 
-        System.out.println("Минимальное число - " + Math.min(firstNumber, secondNumber));
+        System.out.println("Минимальное число - " + MinCalculate.calculateMinMethod(firstNumber, secondNumber));
 
         scan.close();
     }
