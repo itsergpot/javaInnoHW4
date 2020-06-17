@@ -1,6 +1,6 @@
 package potapov.sergey.part1.HW6.worker;
 
-public class Workers implements workActions{
+public class Workers implements WorkActions {
     private String name;
     private int age;
     private SexEnum sex;

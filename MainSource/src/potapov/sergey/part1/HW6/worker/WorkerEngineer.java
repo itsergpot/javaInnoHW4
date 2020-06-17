@@ -1,6 +1,6 @@
 package potapov.sergey.part1.HW6.worker;
 
-public class workerEngineer extends Workers implements workActions {
+public class WorkerEngineer extends Workers implements WorkActions {
 
     private String name;
     private int age;
@@ -57,7 +57,7 @@ public class workerEngineer extends Workers implements workActions {
         System.out.println("make a break for 5 minutes!");
     }
 
-    public workerEngineer(String name, int age, SexEnum sex) {
+    public WorkerEngineer(String name, int age, SexEnum sex) {
         this.name = name;
         this.age = age;
         this.sex = sex;
