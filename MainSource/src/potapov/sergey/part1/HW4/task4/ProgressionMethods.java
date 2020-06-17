@@ -1,4 +1,4 @@
-package potapov.sergey.part1.task4;
+package potapov.sergey.part1.HW4.task4;
 
 import java.util.Scanner;
 

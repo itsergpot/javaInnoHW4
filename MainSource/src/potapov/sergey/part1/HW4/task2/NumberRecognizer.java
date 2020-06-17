@@ -1,4 +1,4 @@
-package potapov.sergey.part1.task2;
+package potapov.sergey.part1.HW4.task2;
 
 public class NumberRecognizer {
 

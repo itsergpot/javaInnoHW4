@@ -1,4 +1,4 @@
-package potapov.sergey.part1.task3;
+package potapov.sergey.part1.HW4.task3;
 
 public class Main {
 
