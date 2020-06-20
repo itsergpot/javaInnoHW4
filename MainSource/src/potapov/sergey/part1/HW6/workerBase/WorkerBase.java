@@ -1,18 +1,18 @@
 package potapov.sergey.part1.HW6.workerBase;
 
-import potapov.sergey.part1.HW6.worker.Workers;
+import potapov.sergey.part1.HW6.worker.AbstractWorker;
 
 import java.util.HashMap;
 
 public class WorkerBase {
 
-    HashMap<String, Workers> workersHashMap = new HashMap<>();
+    private final HashMap<String, AbstractWorker> workersHashMap = new HashMap<>();
 
-    public void addWorkerToHashMap(Workers worker){
+    public void addWorkerToHashMap(AbstractWorker worker){
         workersHashMap.put(worker.getName(), worker);
     }
 
-    public Workers getWorkerFromHashMap(String worker){
+    public AbstractWorker getWorkerFromHashMap(String worker){
         return workersHashMap.get(worker);
     }
 }

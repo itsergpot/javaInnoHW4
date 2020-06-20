@@ -1,6 +1,6 @@
 package potapov.sergey.part1.HW6.worker;
 
-public class Workers implements WorkActions {
+public abstract class AbstractWorker implements WorkerImpl {
     private String name;
     private int age;
     private SexEnum sex;
@@ -39,7 +39,7 @@ public class Workers implements WorkActions {
     }
 
     //default constructor
-    public Workers() {
+    public AbstractWorker() {
         setName(null);
         setAge(0);
         setSex(null);

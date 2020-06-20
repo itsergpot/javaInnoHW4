@@ -1,6 +1,6 @@
 package potapov.sergey.part1.HW6.worker;
 
-public class WorkerEngineer extends Workers implements WorkActions {
+public class WorkerEngineer extends AbstractWorker implements WorkerImpl {
 
     private String name;
     private int age;
@@ -55,6 +55,10 @@ public class WorkerEngineer extends Workers implements WorkActions {
     @Override
     public void takeBreak() {
         System.out.println("make a break for 5 minutes!");
+    }
+
+    public void repairMechanism(String mechanism){
+        System.out.println("Mechanism" + mechanism + " has been repaired!");
     }
 
     public WorkerEngineer(String name, int age, SexEnum sex) {

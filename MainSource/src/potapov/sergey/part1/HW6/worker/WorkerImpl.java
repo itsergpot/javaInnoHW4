@@ -1,6 +1,6 @@
 package potapov.sergey.part1.HW6.worker;
 
-public interface WorkActions {
+public interface WorkerImpl {
 
     void startWorking();
     void stopWorking();

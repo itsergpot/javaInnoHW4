@@ -2,13 +2,15 @@ package potapov.sergey.part1.HW7;
 
 import java.util.Scanner;
 
-public class ChoiceActions {
+import static potapov.sergey.part1.HW7.DisplayInfoMessages.*;
+
+public class Choice {
     public void setChoice(int choice) {
 
         int money;
-        Scanner inc_value_of_money = new Scanner(System.in);
-        MoneyActions current_bill = MoneyActions.getMoneyActionsObj();
-        Scanner inc_drink_choice = new Scanner(System.in);
+        Scanner incValueOfMoney = new Scanner(System.in);
+        Money currentBill = Money.getMoneyObj();
+        Scanner incDrinkChoice = new Scanner(System.in);
 
         switch (choice) {
             case 0:
@@ -16,52 +18,52 @@ public class ChoiceActions {
                 System.exit(0);
                 break;
             case 1:
-                GoodsListEnum.printAllGoods();
-                Main.defaultIncMessage();
+                printAllGoods();
+                defaultIncMessage();
                 System.out.print("\n");
                 break;
             case 2:
                 System.out.println("Введите сумму:");
-                money = inc_value_of_money.nextInt();
-                current_bill.depositMoney(money);
-                System.out.println("Текущий баланс: " + MoneyActions.getCurrentValueOfMoney() + " руб.");
-                Main.defaultIncMessage();
+                money = incValueOfMoney.nextInt();
+                currentBill.depositMoney(money);
+                currentValueOfMoney();
+                defaultIncMessage();
                 System.out.print("\n");
                 break;
             case 3:
-                System.out.println("Текущий баланс: " + MoneyActions.getCurrentValueOfMoney() + " руб.");
-                Main.defaultIncMessage();
+                currentValueOfMoney();
+                defaultIncMessage();
                 System.out.print("\n");
                 break;
             case 4:
                 System.out.println("Выберите напиток:");
-                GoodsListEnum.printAllGoods();
+                printAllGoods();
                 System.out.println("Чтобы отменить действие введите 0");
                 outLoop: while (true) {
-                    int drink_choice = inc_drink_choice.nextInt();
-                    if (drink_choice == 0){
+                    int drinkChoice = incDrinkChoice.nextInt();
+                    if (drinkChoice == 0){
                         break;
                     }
-                    for (GoodsListEnum list : GoodsListEnum.values()
+                    for (GoodsEnum list : GoodsEnum.values()
                     ) {
-                        if (drink_choice == list.serial_number) {
-                            if (MoneyActions.getCurrentValueOfMoney() - list.cost >= 0) {
-                                current_bill.makePurchase(list.cost);
+                        if (drinkChoice == list.serialNumber) {
+                            if (Money.getCurrentValueOfMoney() - list.cost >= 0) {
+                                currentBill.makePurchase(list.cost);
                                 System.out.println("Покупка совершена.");
-                                System.out.println("Текущий баланс: " + MoneyActions.getCurrentValueOfMoney() + " руб.");
+                                currentValueOfMoney();
                             } else {
                                 System.out.println("На вашем счете недостаточно средств для покупки. Пополните баланс" +
-                                        " счета. Текущий баланс: " + MoneyActions.getCurrentValueOfMoney() + " руб.");
+                                        " счета. Текущий баланс: " + Money.getCurrentValueOfMoney() + " руб.");
                             }
                             break outLoop;
                         }
                     }
                     System.out.println("Напитка не найдено. Повторите ввод:");
                 }
-                Main.defaultIncMessage();
+                defaultIncMessage();
                 break;
             default:
-                Main.defaultIncMessage();
+                defaultIncMessage();
                 System.out.print("\n");
         }
     }

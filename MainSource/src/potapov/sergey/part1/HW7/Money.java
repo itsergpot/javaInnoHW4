@@ -1,22 +1,22 @@
 package potapov.sergey.part1.HW7;
 
-public class MoneyActions {
+public class Money {
     private static int money = 0;
 
-    private static MoneyActions moneyActionsObj;
+    private static Money moneyObj;
 
-    private MoneyActions() {
+    private Money() {
     }
 
     public static int getCurrentValueOfMoney(){
         return money;
     }
 
-    public static MoneyActions getMoneyActionsObj() {
-        if (MoneyActions.moneyActionsObj == null) {
-            MoneyActions.moneyActionsObj = new MoneyActions();
+    public static Money getMoneyObj() {
+        if (moneyObj == null) {
+            moneyObj = new Money();
         }
-        return MoneyActions.moneyActionsObj;
+        return moneyObj;
     }
 
     public void depositMoney(int incMoney){

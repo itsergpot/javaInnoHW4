@@ -1,7 +1,6 @@
 package potapov.sergey.part1.HW6;
 
 import potapov.sergey.part1.HW6.worker.SexEnum;
-import potapov.sergey.part1.HW6.worker.Workers;
 import potapov.sergey.part1.HW6.worker.WorkerEngineer;
 import potapov.sergey.part1.HW6.workerBase.WorkerBase;
 
@@ -10,11 +9,11 @@ public class Main {
 
 
         WorkerBase workerBase = new WorkerBase();
-        Workers worker1 = new Workers();
-        workerBase.addWorkerToHashMap(worker1);
-        Workers worker2 = new WorkerEngineer("Vasya",22, SexEnum.MALE);
-        worker2.startWorking();
-        worker2.stopWorking();
+        WorkerEngineer worker = new WorkerEngineer("Vasya",22, SexEnum.MALE);
+        workerBase.addWorkerToHashMap(worker);
+        worker.startWorking();
+        worker.stopWorking();
+        worker.repairMechanism("Some stuff");
 
     }
 }
