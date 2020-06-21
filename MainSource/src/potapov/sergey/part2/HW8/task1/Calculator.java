@@ -2,29 +2,21 @@ package potapov.sergey.part2.HW8.task1;
 
 public class Calculator {
 
-    double value1, value2, percantage;
-
-    Calculator(int value1, int value2, double percantage){
-        this.value1 = value1;
-        this.value2 = value2;
-        this.percantage = percantage;
+    public static double subtraction(int value1, int value2){
+        return value1 - value2;
     }
 
-    public static double subtraction(Calculator obj){
-        return obj.value1 - obj.value2;
+    public static double multiplication(int value1, int value2){
+        return value1 * value2;
     }
 
-    public static double multiplication(Calculator obj){
-        return obj.value2 * obj.value1;
+    public static double addition(int value1, int value2){
+        return value1 + value2;
     }
 
-    public static double addition(Calculator obj){
-        return obj.value1 + obj.value2;
-    }
-
-    public static double division(Calculator obj){
+    public static double division(int value1, int value2){
         try{
-            return obj.value1 / obj.value2;
+            return (double) value1 / value2;
         }
         catch (ArithmeticException ex){
             System.out.println();
@@ -32,8 +24,36 @@ public class Calculator {
         }
     }
 
-    public static double percentageOfNumber(Calculator obj){
-        return obj.value1 * (obj.percantage / 100);
+    public static double percentageOfNumber(int value1, int percantage){
+        return value1 * ((double) percantage / 100);
     }
+
+    public static double subtraction(double value1, double value2){
+        return value1 - value2;
+    }
+
+    public static double multiplication(double value1, double value2){
+        return value1 * value2;
+    }
+
+    public static double addition(double value1, double value2){
+        return value1 + value2;
+    }
+
+    public static double division(double value1, double value2){
+        try{
+            return value1 / value2;
+        }
+        catch (ArithmeticException ex){
+            System.out.println();
+            return 0;
+        }
+    }
+
+    public static double percentageOfNumber(double value1, double percantage){
+        return value1 * (percantage / 100);
+    }
+
+
 
 }
