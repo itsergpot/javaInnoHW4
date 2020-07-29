@@ -56,7 +56,7 @@ public class UserBasket implements Basket{
 
     @Override
     public void clear() {
-        productsObjArrList = new ArrayList<>();
+        productsObjArrList.clear();
         System.out.println("User basket was discarded");
     }
 

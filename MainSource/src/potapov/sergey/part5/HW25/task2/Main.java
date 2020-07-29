@@ -1,9 +1,8 @@
-package potapov.sergey.part5.HW23;
+package potapov.sergey.part5.HW25.task2;
 
 public class Main {
     public static void main(String[] args) {
         UserBasket userBasket = new UserBasket();
-
 
         userBasket.addProduct("beer",3);
         userBasket.addProduct("meat",3);
