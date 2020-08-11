@@ -33,10 +33,10 @@ public class Main {
                 }
             }
             System.out.println(map);
-            for (Map.Entry<Character, Integer> hm : map.entrySet()) {
-                if (hm.getValue() == 1) {
-                    System.out.println("первый неповторяющийся символ в слове " + incString + " равен " + hm.getKey());
-                    return hm.getKey();
+            for (Map.Entry<Character, Integer> resultMap : map.entrySet()) {
+                if (resultMap.getValue() == 1) {
+                    System.out.println("первый неповторяющийся символ в слове " + incString + " равен " + resultMap.getKey());
+                    return resultMap.getKey();
                 }
             }
         }
