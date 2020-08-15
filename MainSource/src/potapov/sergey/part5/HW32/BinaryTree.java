@@ -41,6 +41,6 @@ public class BinaryTree {
         if(node.left ==null && node.right==null)
             return 1;
         else
-            return getLeafCountOfBinaryTree(node.left)+ getLeafCountOfBinaryTree(node.right);
+            return getLeafCountOfBinaryTree(node.left) + getLeafCountOfBinaryTree(node.right);
     }
 }
