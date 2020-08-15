@@ -6,13 +6,13 @@ public class BinaryTree {
         int data;
         TreeNode left;
         TreeNode right;
+
         TreeNode(int data) {
             this.data = data;
         }
     }
 
-    public static TreeNode createBinaryTree()
-    {
+    public static TreeNode createBinaryTree() {
 
         TreeNode rootNode = new TreeNode(22);
         TreeNode node12 = new TreeNode(12);
@@ -25,20 +25,19 @@ public class BinaryTree {
         rootNode.left = node30;
         rootNode.right = node55;
 
-        node30.left=node12;
-        node30.right=node14;
+        node30.left = node12;
+        node30.right = node14;
 
-        node55.left=node50;
-        node55.right=node70;
+        node55.left = node50;
+        node55.right = node70;
 
         return rootNode;
     }
 
-    public static int getLeafCountOfBinaryTree(TreeNode node)
-    {
-        if(node == null)
+    public static int getLeafCountOfBinaryTree(TreeNode node) {
+        if (node == null)
             return 0;
-        if(node.left ==null && node.right==null)
+        if (node.left == null && node.right == null)
             return 1;
         else
             return getLeafCountOfBinaryTree(node.left) + getLeafCountOfBinaryTree(node.right);
